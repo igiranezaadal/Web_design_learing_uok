@@ -1,0 +1,35 @@
+/* Ensure the button acts as the positioning anchor */
+#button {
+  position: relative;
+  overflow: hidden; /* Keeps the ripple inside the button */
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #6200ee;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Base styles for the dynamic ripple element */
+.ripple {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.7); /* White ripple with transparency */
+  border-radius: 50%;
+  pointer-events: none; /* Prevents interference with clicks */
+  
+  /* Center the growing ripple on the exact click coordinate */
+  transform: translate(-50%, -50%) scale(0);
+  
+  /* Trigger the expanding animation */
+  animation: ripple-effect 600ms linear;
+}
+
+/* The scaling and fading animation sequence */
+@keyframes ripple-effect {
+  to {
+    transform: translate(-50%, -50%) scale(4); /* Grows out from center */
+    opacity: 0; /* Smoothly fades out */
+  }
+}

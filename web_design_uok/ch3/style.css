@@ -1,0 +1,75 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1f2328;
+    background-color: #f2f4f7;
+}
+.shell{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+.site-main{
+    flex: 2;
+}
+.site-main iframe{
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+.site-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 7%;
+    background-color: #163d6b;
+    color: #fff;
+
+}
+/* .header{
+    color: #fff;
+} */
+.logo{
+    font-weight:bolder;
+    color: #fff;
+}
+/* .links{
+    padding: 14px;
+    background: #000;
+    gap: 14px;
+} */
+nav a{
+    color: hsl(240, 1%, 95%);
+    padding-right: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    /* background: #000; */
+}
+
+.page{
+    padding: 24px 14px;
+}
+.centered{
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+}
+.card{
+    background: #fff;
+    min-width: 1000px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 3px rgba(0, 0, 0, 0.1);
+}
+.grid{
+    /* padding: 10px 20px;   */
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 16px;
+}

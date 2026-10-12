@@ -62,7 +62,7 @@ nav a{
 }
 .card{
     background: #fff;
-    min-width: 1000px;
+    min-width: 700px;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 8px 3px rgba(0, 0, 0, 0.1);
@@ -72,4 +72,30 @@ nav a{
     display: grid;
     grid-template-columns: repeat(6,1fr);
     gap: 16px;
+}
+.field{
+    grid-column: span 6;
+}
+.field.half{
+    grid-column: span 3;
+}
+.field.third{
+    grid-column: span 2;
+}
+.field label{
+    display: block;
+}
+.field input{
+    width: 100%;
+    padding: 10px;
+    bottom: 1 solid blue;
+}
+.button{
+    grid-column: span 6;
+    padding: 12px;
+    border: 0;
+    background: #163d6b;
+    border-radius: 6px;
+    cursor: pointer;
+    color:white
 }

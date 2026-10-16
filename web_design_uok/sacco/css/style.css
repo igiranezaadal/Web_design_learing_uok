@@ -1,0 +1,352 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Inter, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1f2933;
+    background: #f4f7f5;
+}
+
+main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    margin: 4px 0 14px;
+    font-size: 26px;
+    color: #0f5132;
+}
+
+h2 {
+    margin: 22px 0 8px;
+    font-size: 19px;
+    color: #0f5132;
+}
+
+.muted {
+    color: #6c7a72;
+}
+
+
+/* ==========================================================================
+   Layout: header, footer
+   ========================================================================== */
+
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: #0f5132;
+}
+
+.brand {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.top nav a {
+    margin-left: 14px;
+    font-weight: 600;
+    color: #d1e7dd;
+    text-decoration: none;
+}
+
+.top nav a:hover {
+    color: #fff;
+}
+
+.foot {
+    padding: 16px;
+    font-size: 13px;
+    text-align: center;
+    color: #6c7a72;
+}
+
+
+/* ==========================================================================
+   Cards and forms
+   ========================================================================== */
+
+.card {
+    padding: 18px;
+    background: #fff;
+    border: 1px solid #d7e2dc;
+    border-radius: 10px;
+}
+
+form.card label {
+    display: block;
+    margin: 10px 0 4px;
+    font-weight: 600;
+}
+
+form.card input,
+form.card select {
+    width: 100%;
+    padding: 8px 10px;
+    font: inherit;
+    border: 1px solid #b8c7bf;
+    border-radius: 6px;
+}
+
+form.card input:user-invalid {
+    background: #fff5f5;
+    border-color: #b02a37;
+    outline: 2px solid #f1aeb5;
+}
+
+form.card fieldset {
+    margin: 10px 0 0;
+    padding: 0;
+    border: 0;
+}
+
+form.card legend {
+    padding: 0;
+    font-weight: 600;
+}
+
+form.card fieldset label {
+    display: inline-block;
+    margin-right: 18px;
+    font-weight: 400;
+}
+
+form.card fieldset input {
+    width: auto;
+}
+
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.buttons,
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons {
+    margin-top: 16px;
+}
+
+.actions {
+    margin-top: 14px;
+}
+
+button,
+.button {
+    display: inline-block;
+    padding: 9px 18px;
+    font: inherit;
+    font-weight: 700;
+    color: #fff;
+    background: #198754;
+    border: 0;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button.light,
+.button.light {
+    color: #0f5132;
+    background: #e9f2ed;
+}
+
+button.danger {
+    background: #b02a37;
+}
+
+
+/* ==========================================================================
+   Messages
+   ========================================================================== */
+
+.errors {
+    margin: 0 0 14px;
+    padding: 10px 14px 10px 32px;
+    color: #842029;
+    background: #fdecee;
+    border: 1px solid #f1aeb5;
+    border-radius: 8px;
+}
+
+.flash {
+    margin: 0 0 14px;
+    padding: 10px 14px;
+    font-weight: 600;
+    color: #0f5132;
+    background: #d1e7dd;
+    border: 1px solid #a3cfbb;
+    border-radius: 8px;
+}
+
+.message {
+    padding: 10px 14px;
+    color: #084298;
+    background: #e7f1ff;
+    border: 1px solid #9ec5fe;
+    border-radius: 8px;
+}
+
+
+/* ==========================================================================
+   Code blocks
+   ========================================================================== */
+
+pre.sql {
+    padding: 12px;
+    font-size: 14px;
+    color: #d1e7dd;
+    background: #1e2a24;
+    border-radius: 8px;
+    white-space: pre-wrap;
+}
+
+pre.dump {
+    padding: 10px;
+    font-size: 14px;
+    background: #fff;
+    border: 1px dashed #8aa597;
+    border-radius: 8px;
+}
+
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 1px solid #e3ebe6;
+}
+
+th {
+    font-size: 14px;
+    color: #0f5132;
+    background: #e9f2ed;
+}
+
+td.num,
+th.num {
+    text-align: right;
+}
+
+tr.total td {
+    font-weight: 700;
+    background: #f4f7f5;
+}
+
+tr.paid td {
+    color: #6c7a72;
+}
+
+
+/* ==========================================================================
+   Detail list, search, summary tiles
+   ========================================================================== */
+
+.details {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    gap: 6px 14px;
+    margin: 0;
+}
+
+.details dt {
+    font-weight: 600;
+    color: #4b5d53;
+}
+
+.details dd {
+    margin: 0;
+}
+
+.search {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.search input {
+    flex: 1;
+    padding: 8px 10px;
+    font: inherit;
+    border: 1px solid #b8c7bf;
+    border-radius: 6px;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 14px 0;
+}
+
+.summary div {
+    padding: 10px 12px;
+    background: #fff;
+    border: 1px solid #d7e2dc;
+    border-radius: 10px;
+}
+
+.summary span {
+    display: block;
+    font-size: 13px;
+    color: #4b5d53;
+}
+
+.summary strong {
+    font-size: 18px;
+    color: #0f5132;
+}
+
+
+/* ==========================================================================
+   Badges
+   ========================================================================== */
+
+.badge {
+    display: inline-block;
+    padding: 1px 8px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 99px;
+}
+
+.badge.active {
+    color: #664d03;
+    background: #fff3cd;
+}
+
+.badge.paid {
+    color: #0f5132;
+    background: #d1e7dd;
+}

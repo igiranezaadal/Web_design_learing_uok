@@ -1,64 +1,183 @@
-body {
+/* Base Page Styling */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: #f4f6f4;
+  color: #2e382e;
+  line-height: 1.5;
 }
 
+/* Requirement E: Top section diagonal gradient and centered text */
 .hero {
-  background: linear-gradient(135deg, #1b5e20, #4caf50);
-  color: white;
+  background: linear-gradient(135deg, #1b4d2e 0%, #2e6b43 100%);
+  color: #ffffff;
   text-align: center;
-  padding: 50px 20px 100px 20px;
+  padding: 50px 20px 140px 20px;
 }
 
-.main-content {
-  max-width: 1000px;
-  margin: -60px auto 40px auto;
-  padding: 0 20px;
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 12px;
 }
 
-.hero-card {
-  background: white;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+.hero p {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Layout Container */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+}
+
+/* Requirement E: Overlapping featured card */
+.featured-card {
+  margin-top: -100px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
   text-align: center;
 }
 
-.hero-card img {
+.featured-card img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 12px;
+  display: block;
 }
 
+.featured-card figcaption {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-style: italic;
+  font-size: 0.88rem;
+  color: #556655;
+  margin-top: 12px;
+}
+
+/* Leaf Divider */
 .divider {
   text-align: center;
-  margin: 30px 0;
+  margin: 36px 0;
 }
 
-.grid-container {
+.divider img {
+  max-width: 240px;
+  height: auto;
+}
+
+/* Headings */
+h2 {
+  color: #1b4d2e;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+}
+
+h3 {
+  color: #1b4d2e;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.forest-section {
+  margin-bottom: 30px;
+}
+
+/* Requirement F: CSS Grid auto-fit minmax responsive grid */
+.grid-2col {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  margin: 20px 0;
 }
 
-.grid-container img {
+/* Requirement F: Images rounded corners and shadows */
+.forest-section img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  display: block;
+  object-fit: cover;
 }
 
-.panel {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+/* Cards layout for Video, Audio & Map */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
 }
 
-video, audio, iframe {
+.stacked-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Requirement F: Video, Audio, and Map fill full width */
+video {
   width: 100%;
-  border-radius: 8px;
-  border: none;
+  height: 70%;
+  border-radius: 10px;
+  background-color: #000;
+  display: block;
+}
+
+audio {
+  width: 100%;
+  margin-top: 12px;
+}
+
+iframe {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.card-caption {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.85rem;
+  color: #556655;
+  margin-top: 14px;
+  line-height: 1.4;
+}
+
+.card p {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.9rem;
+  color: #445544;
+}
+
+/* Page Footer */
+body > footer {
+  background-color: #1b4d2e;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.85rem;
+  margin-top: 40px;
+}
+
+/* Mobile responsive styling fine-tuning */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .featured-card {
+    margin-top: -80px;
+    padding: 10px;
+  }
 }

@@ -3,65 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nyungwe Visitor Centre</title>
-  <!-- Replace favicon.ico with exact icon filename from q03 folder if different -->
-  <link rel="icon" href="images/park-icon.png" type="image/png">
+  <title>Discover Nyungwe - Nyungwe Visitor Centre</title>
+  
+  <!-- Favicon link (Requirement A) -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <!-- Top Header Section with Diagonal Gradient -->
   <header class="hero">
-    <h1>Nyungwe National Park</h1>
-    <p>Discover the wonders of the ancient rainforest</p>
+    <h1>Discover Nyungwe</h1>
+    <p>What you will see in one of the oldest rainforests in Africa, before you travel.</p>
   </header>
 
-  <main class="main-content">
-    <figure class="hero-card">
-      <img src="images/canopy-walk.jpg" alt="Canopy walk suspension bridge high above Nyungwe rainforest" width="700" height="400">
-      <figcaption>Experience the breathtaking Canopy Walkway through Nyungwe's treetops.</figcaption>
+  <main class="container">
+    <!-- Featured Canopy Walk Card Overlapping Header (Requirement B & E) -->
+    <figure class="featured-card">
+      <img 
+        src="images/canopy-walk.jpg" 
+        alt="High suspension canopy walkway stretching across the dense green Nyungwe rainforest valley" 
+        width="1200" 
+        height="700"
+      >
+      <figcaption>The canopy walkway at Uwinka, 50 metres above the forest floor</figcaption>
     </figure>
 
+    <!-- Decorative Leaf Divider (Requirement B) -->
     <div class="divider">
-      <img src="images/leaf-divider.png" alt="" class="leaf-img">
+      <img src="images/leaf-divider.png" alt="" width="300" height="24">
     </div>
 
-    <section>
+    <!-- Forest Photos Section -->
+    <section class="forest-section">
       <h2>In the forest</h2>
-      <div class="grid-container">
-        <img src="images/rainforest.jpg" alt="Dense green tropical trees inside Nyungwe rainforest" width="400" height="260" loading="lazy">
-        <img src="images/waterfall.jpg" alt="Sunlight filtering through canopy leaves in Nyungwe" width="400" height="260" loading="lazy">
+      <div class="grid-2col">
+        <img 
+          src="images/rainforest.jpg" 
+          alt="Panoramic view over the misty green tree canopy of Nyungwe National Park" 
+          width="600" 
+          height="400" 
+          loading="lazy"
+        >
+        <img 
+          src="images/waterfall.jpg" 
+          alt="Scenic Kamiranzovu waterfall cascading through dense rainforest trees" 
+          width="600" 
+          height="400" 
+          loading="lazy"
+        >
       </div>
     </section>
 
-    <section class="media-section grid-container">
-      <div class="panel">
-        <!-- REPLACE video/poster filenames with exact files from q03 -->
-        <video controls poster="images/canopy-poster.jpg" width="100%">
+    <!-- Interactive Media & Map Section (Requirement C, D & F) -->
+    <section class="media-section grid-2col">
+      <!-- Video Panel -->
+      <article class="card">
+        <h3>Walk the canopy</h3>
+        <video controls poster="images/video-poster.jpg">
           <source src="media/canopy-walk.mp4" type="video/mp4">
-          Your browser does not support the video tag. <a href="media/canopy-walk.mp4">Download Canopy Walk Video</a>.
+          Your browser does not support the video tag. You can 
+          <a href="media/canopy-walk.mp4" download>download the canopy walk video here</a>.
         </video>
-      </div>
+        <p class="card-caption">
+          The walkway is 160 metres long and hangs 70 metres above a valley. Walks start every hour from 8:00, with a guide.
+        </p>
+      </article>
 
-      <div class="panel">
-        <p>More than 300 bird spicies live in Nyungwe. This is what you will hear in the morning</p>
-        <!-- REPLACE audio filename with exact file from q03 -->
-        <audio controls>
-          <source src="media/bird-calls.mp3" type="audio/mpeg">
-          Your browser does not support the audio element. <a href="media/bird-calls.mp3">Download Bird Calls Audio</a>.
-        </audio>
-      </div>
-    </section>
+      <!-- Audio & Map Panel -->
+      <div class="stacked-cards">
+        <!-- Audio Panel -->
+        <article class="card">
+          <h3>Listen to the birds</h3>
+          <p>More than 300 bird species live in Nyungwe. This is what you will hear in the morning.</p>
+          <audio controls>
+            <source src="media/bird-call.mp3" type="audio/mpeg">
+            Your browser does not support the audio element. You can 
+            <a href="media/bird-call.mp3" download>download the bird call recording here</a>.
+          </audio>
+        </article>
 
-    <section class="map-section">
-      <h2>Uwinka Entrance Map</h2>
-      <iframe 
-        title="OpenStreetMap location of Uwinka Entrance in Nyungwe National Park"
-        width="100%" 
-        height="350" 
-        src="https://www.openstreetmap.org/export/embed.html?bbox=29.1000%2C-2.5500%2C29.3000%2C-2.4000&amp;layer=mapnik">
-      </iframe>
+        <!-- OpenStreetMap Panel (Requirement D) -->
+        <article class="card">
+          <h3>Find the park entrance</h3>
+          <iframe 
+            title="OpenStreetMap showing the location of Uwinka Visitor Centre entrance in Nyungwe National Park"
+            width="100%" 
+            height="220" 
+            src="https://www.openstreetmap.org/export/embed.html?bbox=29.1100%2C-2.4800%2C29.1300%2C-2.4600&amp;layer=mapnik&amp;marker=-2.4700%2C29.1200"
+            style="border: 0;"
+            allowfullscreen>
+          </iframe>
+        </article>
+      </div>
     </section>
   </main>
+
+  <footer>
+    <p>Nyungwe Visitor Centre - Uwinka, Nyamasheke</p>
+  </footer>
 
 </body>
 </html>

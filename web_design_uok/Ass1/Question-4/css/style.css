@@ -1,0 +1,63 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #f8fafc; }
+
+.main-header {
+  background-color: #1e3a8a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  color: white;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo { height: 40px; margin-right: 12px; }
+
+.main-header ul { display: flex; list-style: none; gap: 15px; }
+
+.main-header a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background 0.3s;
+}
+
+.main-header ul a:hover,
+.main-header ul a:focus {
+  background-color: #d97706; /* Gold pill */
+}
+
+main { max-width: 800px; margin: 30px auto; padding: 0 20px; }
+
+.jump-nav { display: flex; gap: 10px; margin-bottom: 25px; }
+
+.jump-btn {
+  border: 2px solid #1e3a8a;
+  color: #1e3a8a;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.jump-btn:hover, .jump-btn:focus {
+  background-color: #1e3a8a;
+  color: white;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 6px solid #d97706; /* Gold left border */
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}

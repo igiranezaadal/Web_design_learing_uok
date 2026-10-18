@@ -1,0 +1,223 @@
+/* RESET & BASE STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  /* E. Diagonal gradient: Orange -> Pink -> Purple */
+  background: linear-gradient(135deg, #ff7e5f, #feb47b, #e100ff, #7f00ff);
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  max-width: 680px;
+}
+
+.intro {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.intro h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.intro p {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+
+/* E. FORM CONTAINER: White card with rounded corners and deep shadow */
+.registration-form {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* FIELDSET & LEGEND STYLING */
+fieldset {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  /* E. Grid layout with auto-fit minmax(240px, 1fr) */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+
+legend {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #8a2be2;
+  padding: 0 0.5rem;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* E. Full-width spanning elements */
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.required-star {
+  color: #e6005c;
+  font-weight: bold;
+}
+
+label, .group-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  color: #444;
+}
+
+/* F. FIELD INPUTS: Rounded borders, focus glow */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.25s ease;
+  background-color: #fafafa;
+}
+
+/* F. Pink border and glow on :focus */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #ff1493;
+  box-shadow: 0 0 8px rgba(255, 20, 147, 0.4);
+  background-color: #ffffff;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* F. RADIO BUTTONS: Rounded Pill Outline */
+.radio-pill-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.2rem;
+}
+
+.radio-pill {
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-pill input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-pill span {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #ff69b4;
+  border-radius: 50px; /* Pill shape */
+  font-weight: 600;
+  color: #d81b60;
+  background-color: #fff;
+  transition: all 0.25s ease;
+}
+
+.radio-pill input[type="radio"]:checked + span {
+  background-color: #ff1493;
+  color: #ffffff;
+  border-color: #ff1493;
+  box-shadow: 0 4px 10px rgba(255, 20, 147, 0.3);
+}
+
+.radio-pill input[type="radio"]:focus + span {
+  outline: 2px solid #8a2be2;
+  outline-offset: 3px;
+  border-color: #ff1493;
+  box-shadow: 0 0 8px rgba(255, 20, 147, 0.5);
+}
+
+/* CHECKBOX STYLING */
+.checkbox-group {
+  margin: 0.5rem 0 1.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: #ff1493;
+}
+
+/* F. SUBMIT BUTTON: Full-width orange-to-pink gradient */
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #ff7e5f, #ff1493);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 0.25s ease, transform 0.1s ease;
+  box-shadow: 0 4px 12px rgba(255, 20, 147, 0.3);
+}
+
+/* F. Darkens on hover and focus */
+.submit-btn:hover,
+.submit-btn:focus {
+  filter: brightness(0.85);
+  outline: 3px solid #8a2be2;
+  outline-offset: 2px;
+}
+
+.submit-btn:active {
+  transform: scale(0.99);
+}
+
+/* RESPONSIVE DESIGN ADJUSTMENTS */
+@media (max-width: 480px) {
+  .registration-form {
+    padding: 1.5rem 1rem;
+  }
+  
+  fieldset {
+    padding: 1rem 0.8rem;
+  }
+}

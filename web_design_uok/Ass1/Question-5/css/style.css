@@ -1,0 +1,74 @@
+body {
+  background-color: #0b132b; /* Dark navy */
+  color: #e0e1dd;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #4a00e0, #8e2de2);
+  padding: 40px 20px;
+}
+
+.breadcrumb {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 8px;
+}
+
+.breadcrumb a { color: #d0d0d0; text-decoration: none; }
+
+.breadcrumb li+li::before {
+  content: "›";
+  margin-right: 8px;
+  color: white;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: #1c2541;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.full-width { grid-column: 1 / -1; }
+
+.tick-list { list-style: none; padding-left: 0; }
+.tick-list li { margin-bottom: 10px; }
+.tick-list li::before {
+  content: "✓ ";
+  color: #4e2a84;
+  color: #00e676;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.step-list { padding-left: 20px; }
+.step-list li::marker { color: #3a86ff; font-weight: bold; }
+.step-list li:last-child { margin-bottom: 0; }
+
+.nested-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.sub-card {
+  background: #0b132b;
+  padding: 15px;
+  border-radius: 6px;
+  border-top: 3px solid #3a86ff;
+}
+
+dt { font-weight: bold; color: #3a86ff; }

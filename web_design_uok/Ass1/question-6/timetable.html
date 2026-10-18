@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Examination Timetable</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <main>
+    <h1>Examination Timetable</h1>
+    <p class="week-title">Faculty of Computing - Week 1 Examinations</p>
+
+    <div class="table-wrapper">
+      <table>
+        <caption>Weekly Examination Schedule</caption>
+        <thead>
+          <tr>
+            <th scope="col">Day</th>
+            <th scope="col">Time</th>
+            <th scope="col">Module</th>
+            <th scope="col">Room</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" rowspan="2">Monday</th>
+            <td>09:00 - 11:00</td>
+            <td>Database Systems</td>
+            <td>Lab 1</td>
+          </tr>
+          <tr>
+            <td>11:30 - 13:30</td>
+            <td>Web Technologies</td>
+            <td>Lab 2</td>
+          </tr>
+          <tr>
+            <th scope="row" rowspan="2">Tuesday</th>
+            <td>09:00 - 11:00</td>
+            <td>Discrete Mathematics</td>
+            <td>Hall A</td>
+          </tr>
+          <tr>
+            <td>11:30 - 13:30</td>
+            <td>Software Engineering</td>
+            <td>Hall B</td>
+          </tr>
+          <tr class="all-day-row">
+            <th scope="row">Wednesday</th>
+            <td colspan="2">Project Defence (All Day)</td>
+            <td>Auditorium</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" class="footer-note">Note: Latecomers will not be admitted after 15 minutes.</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </main>
+
+</body>
+</html>

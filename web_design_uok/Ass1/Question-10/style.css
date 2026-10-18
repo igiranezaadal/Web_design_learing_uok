@@ -1,0 +1,128 @@
+/* Base styles and Dark Background (Requirement D) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #120b08; /* Dark background visible below header (Requirement D) */
+  color: #ffffff;
+  text-align: center;
+}
+
+/* 
+==========================================================================
+HEADER STYLES (Requirements B, C, D & F - Longhand Version)
+==========================================================================
+*/
+header {
+  /* D: Minimum height of 92vh and centered using Flexbox */
+  min-height: 92vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #ffffff;
+
+  /* 
+   * B & C: Longhand Background Properties
+   * Gradient overlay is listed first (top layer), background image second (bottom layer)
+   */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('q10/virunga-sunrise.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 
+==========================================================================
+REQUIREMENT F: SHORTHAND EQUIVALENT (CSS COMMENT)
+==========================================================================
+
+header {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('q10/volcano.jpg') center / cover no-repeat;
+}
+
+EXPLANATION OF RESET VALUES:
+When using the `background` shorthand property, if you leave out any longhand 
+properties (such as `background-color`, `background-attachment`, or `background-origin`), 
+the shorthand automatically RESETS those omitted properties to their initial/default values 
+(e.g., `background-color` resets to `transparent`, `background-attachment` to `scroll`).
+==========================================================================
+*/
+
+/* Header Content Styling */
+.header-content {
+  max-width: 800px;
+}
+
+.subheading {
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e2d1c3;
+  display: block;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: #f0f0f0;
+}
+
+/* 
+==========================================================================
+BUTTON STYLES (Requirement E)
+==========================================================================
+*/
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  color: #1a1a1a;
+  
+  /* Gradient from #fbd38d to #ed8936 */
+  background-image: linear-gradient(to right, #fbd38d, #ed8936);
+  
+  /* Generous padding & rounded ends */
+  padding: 14px 36px;
+  border-radius: 50px;
+  
+  /* Coloured shadow */
+  box-shadow: 0 10px 25px rgba(237, 137, 54, 0.4);
+  
+  /* Smooth transition for hover/focus state */
+  transition: all 0.3s ease;
+}
+
+/* Change gradient and shadow on hover and focus */
+.btn:hover,
+.btn:focus {
+  background-image: linear-gradient(to right, #ed8936, #fbd38d);
+  box-shadow: 0 12px 30px rgba(237, 137, 54, 0.6);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* 
+==========================================================================
+MAIN SECTION STYLES
+==========================================================================
+*/
+main {
+  padding: 25px 20px;
+  font-size: 0.95rem;
+  color: #cccccc;
+}

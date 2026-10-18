@@ -1,0 +1,183 @@
+/* 
+   F.POSITIONING TYPES EXPLAINED
+
+    relative: Positions an element relative to its normal position in the flow. 
+
+    Example: Used on .photo-container` to establish a positioning context 
+    for absolute children (`.badge-new` and `.district-overlay`) without 
+    disrupting the document layout flow.
+    absolute: Positions an element relative to its nearest positioned ancestor. 
+
+    Example: Used for the red "NEW" badge and the dark district overlay banner 
+    to anchor them precisely inside the photo container.
+    fixed: Positions an element relative to the browser viewport, meaning it 
+    stays anchored in place even when the user scrolls the page. 
+
+    Example: Used for the green round "Chat with us" button so it remains 
+    pinned in the bottom-right corner of the screen at all times[cite: 2].
+
+   -sticky(when you scroll i go with you): Acts like relative positioning until the element crosses a specific 
+    scroll threshold (e.g., `top: 0`), after which it sticks in place as the 
+    page scrolls past. 
+
+    Example: Used for the navigation bar (`.navbar`) so it stays visible at 
+    the top of the window while visitors scroll through the listings[cite: 2].
+   */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav-brand {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #4f46e5;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: #4f46e5;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.main-content h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.listing-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+}
+
+.photo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge-new {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #ef4444;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.district-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 8px 15px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.period {
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: #6b7280;
+}
+
+.card-body p {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+.chat-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #10b981;
+  color: white;
+  text-decoration: none;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  z-index: 1001;
+  line-height: 1.1;
+  padding: 10px;
+}
+
+.chat-btn:hover {
+  background-color: #059669;
+}

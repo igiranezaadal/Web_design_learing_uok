@@ -1,0 +1,176 @@
+/* 
+   F. GRID or FLEXBOX
+   
+   Grid vs Flexbox Explanation:
+   - CSS Grid was chosen for the main page layout because it excels at 2D layouts 
+     (defining overall structural zones/areas like header, menu, sidebar, footer) 
+     and structured responsive card layout columns.
+
+   - Flexbox is the better tool inside individual dish cards (1D layout) to easily 
+     align elements vertically and push the price element to the bottom using 
+     `margin-top: auto`. Flexbox is also ideal inside the header to align the 
+     title and tagline on opposite sides along a single axis.
+    */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #fffdf5;
+  color: #333;
+  padding: 20px;
+  
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu   hours"
+    "footer footer";
+  grid-template-columns: 1fr 280px;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-header { grid-area: header; }
+.menu-section { grid-area: menu; }
+.sidebar     { grid-area: hours; }
+.site-footer { grid-area: footer; }
+
+.site-header {
+  background: linear-gradient(135deg, #d84315, #f57c00);
+  color: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header h1 {
+  font-family: Georgia, serif;
+  font-size: 2.5rem;
+}
+
+.site-header p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.menu-section h2 {
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  color: #8c2d0d;
+  margin-bottom: 20px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.dish-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0e6d8;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.dish-card h3 {
+  font-size: 1.1rem;
+  color: #8c2d0d;
+  margin-bottom: 10px;
+}
+
+.dish-card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.dish-card .price {
+  margin-top: auto;
+  font-weight: bold;
+  color: #d84315;
+  font-size: 0.95rem;
+}
+
+.dish-of-the-day {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #bf360c, #d84315);
+  color: white;
+  border: none;
+}
+
+.dish-of-the-day h3 {
+  color: white;
+}
+
+.dish-of-the-day h3::before {
+  content: "Dish of the day · ";
+  font-weight: bold;
+  color: #ffcc80;
+}
+
+.dish-of-the-day p {
+  color: #fbe9e7;
+}
+
+.dish-of-the-day .price {
+  color: white;
+}
+
+.sidebar {
+  background-color: #3e2723;
+  color: white;
+  padding: 30px 25px;
+  border-radius: 16px;
+  align-self: start;
+}
+
+.sidebar h2 {
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.sidebar dl {
+  margin-bottom: 25px;
+}
+
+.sidebar dt {
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin-top: 15px;
+}
+
+.sidebar dd {
+  font-size: 0.9rem;
+  color: #ffcc80;
+  margin-top: 3px;
+}
+
+.sidebar address {
+  font-style: normal;
+  font-size: 0.85rem;
+  color: #ffcc80;
+  line-height: 1.5;
+  border-top: 1px solid #5d4037;
+  padding-top: 15px;
+}
+
+.site-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #8c2d0d;
+  padding: 10px 0;
+}

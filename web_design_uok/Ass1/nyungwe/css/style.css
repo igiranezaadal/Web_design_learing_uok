@@ -1,4 +1,3 @@
-/* Base Page Styling */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +11,6 @@ body {
   line-height: 1.5;
 }
 
-/* Requirement E: Top section diagonal gradient and centered text */
 .hero {
   background: linear-gradient(135deg, #1b4d2e 0%, #2e6b43 100%);
   color: #ffffff;
@@ -32,14 +30,12 @@ body {
   opacity: 0.9;
 }
 
-/* Layout Container */
 .container {
-  max-width: 960px;
+  width: 80%;
   margin: 0 auto;
   padding: 0 20px 40px 20px;
 }
 
-/* Requirement E: Overlapping featured card */
 .featured-card {
   margin-top: -100px;
   background: #ffffff;
@@ -64,7 +60,6 @@ body {
   margin-top: 12px;
 }
 
-/* Leaf Divider */
 .divider {
   text-align: center;
   margin: 36px 0;
@@ -75,7 +70,6 @@ body {
   height: auto;
 }
 
-/* Headings */
 h2 {
   color: #1b4d2e;
   font-size: 1.5rem;
@@ -92,14 +86,12 @@ h3 {
   margin-bottom: 30px;
 }
 
-/* Requirement F: CSS Grid auto-fit minmax responsive grid */
 .grid-2col {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
 
-/* Requirement F: Images rounded corners and shadows */
 .forest-section img {
   width: 100%;
   height: auto;
@@ -109,7 +101,6 @@ h3 {
   object-fit: cover;
 }
 
-/* Cards layout for Video, Audio & Map */
 .card {
   background: #ffffff;
   padding: 20px;
@@ -125,7 +116,6 @@ h3 {
   gap: 20px;
 }
 
-/* Requirement F: Video, Audio, and Map fill full width */
 video {
   width: 100%;
   height: 70%;
@@ -159,7 +149,6 @@ iframe {
   color: #445544;
 }
 
-/* Page Footer */
 body > footer {
   background-color: #1b4d2e;
   color: #ffffff;
@@ -170,7 +159,6 @@ body > footer {
   margin-top: 40px;
 }
 
-/* Mobile responsive styling fine-tuning */
 @media (max-width: 600px) {
   .hero h1 {
     font-size: 1.8rem;

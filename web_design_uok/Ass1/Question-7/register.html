@@ -15,14 +15,13 @@
     </header>
 
     <!-- 
-      A. COMMENT ON POST vs GET:
+      A.  POST vs GET:
       POST is used instead of GET for this registration form for two main reasons:
       1. Security/Privacy: GET attaches form data directly to the URL parameters, which exposes personal details (such as e-mail, phone number, and medical conditions) in the browser history, server logs, and shared links. POST sends data inside the HTTP request body, keeping personal data private.
       2. Data Payload: POST supports larger and more complex payloads (such as medical condition notes) without hitting URL length restrictions imposed by web browsers and servers.
     -->
     <form action="#" method="POST" class="registration-form" novalidate>
       
-      <!-- FIELDSET 1: YOUR DETAILS -->
       <fieldset>
         <legend>Your details</legend>
         
@@ -66,7 +65,6 @@
         </div>
       </fieldset>
 
-      <!-- FIELDSET 2: YOUR RACE -->
       <fieldset>
         <legend>Your race</legend>
 
@@ -101,7 +99,6 @@
         </div>
       </fieldset>
 
-      <!-- RULES & TERMS CHECKBOX -->
       <div class="field-group checkbox-group full-width">
         <label class="checkbox-label">
           <input type="checkbox" id="rules" name="rules" required>
@@ -109,7 +106,6 @@
         </label>
       </div>
 
-      <!-- SUBMIT BUTTON -->
       <button type="submit" class="submit-btn">Complete Registration</button>
 
     </form>

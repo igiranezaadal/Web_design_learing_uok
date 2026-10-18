@@ -20,13 +20,13 @@ th, td {
 }
 
 thead tr {
-  background-color: #004d40; /* Dark teal */
+  background-color: #004d40;
   color: white;
   text-transform: uppercase;
 }
 
 tbody th[scope="row"] {
-  background-color: #e0f7fa; /* Pale cyan */
+  background-color: #e0f7fa;
 }
 
 tbody tr:nth-child(even) {
@@ -34,15 +34,15 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-  background-color: #fffde7; /* Pale yellow */
+  background-color: #fffde7;
 }
 
 .all-day-row {
-  background-color: #f3e5f5 !important; /* Purple accent */
+  background-color: #f3e5f5 !important;
 }
 
 .footer-note {
   text-align: center;
-  color: #e65100; /* Dark orange */
+  color: #e65100; 
   font-weight: bold;
 }

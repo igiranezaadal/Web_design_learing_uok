@@ -1,0 +1,168 @@
+/* ==========================================================================
+   PART B: Reset & Box-Sizing Calculation
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+  CALCULATION OF CARD WIDTH:
+  
+  1) Under 'content-box':
+     Total Rendered Width = width + left padding + right padding + left border + right border
+     Total Width = 300px + 20px + 20px + 2px + 2px = 344px.
+     (This is why the developer's original cards came out wider than 300px).
+
+  2) Under 'border-box':
+     Total Rendered Width = width (padding and borders are included inside the 300px).
+     Total Width = 300px.
+*/
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+/* ==========================================================================
+   PART E: Header & Container Setup
+   ========================================================================== */
+
+/* Teal-to-Blue Header */
+.header {
+  background: linear-gradient(135deg, #005c66, #006699);
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 20px 100px; /* Extra bottom padding so container can pull up over it */
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.header p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Centered flex container pulled up over the header */
+.container {
+  max-width: 1100px;
+  margin: -60px auto 40px; /* Negative top margin pulls container up over header */
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   PART C: Card Styling
+   ========================================================================== */
+
+.card {
+  width: 300px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;    /* Thin light border */
+  border-radius: 16px;          /* Rounded corners (16px) */
+  padding: 20px;                 /* 20px padding */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Small pill label */
+.pill {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: #d1f4e0;
+  color: #0d6e4f;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.job-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 4px;
+}
+
+.company-location {
+  font-size: 0.85rem;
+  color: #006699;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* ==========================================================================
+   PART D: Scrollable Fixed-Height Description
+   ========================================================================== */
+
+.description {
+  height: 80px;            /* Fixed height */
+  overflow-y: auto;        /* Scroll inside if text exceeds fixed height */
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   PART F: Bottom Alignment & Focus Outline
+   ========================================================================== */
+
+.card-footer {
+  margin-top: auto;        /* Pushes footer to the bottom of the card */
+  display: flex;
+  justify-content: space-between; /* Closing date and Apply button at opposite ends */
+  align-items: center;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 12px;
+}
+
+.closing-date {
+  font-size: 0.78rem;
+  color: #718096;
+}
+
+.apply-btn {
+  background-color: #007a78;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.apply-btn:hover {
+  background-color: #005c5a;
+}
+
+/* Orange outline on keyboard focus */
+.apply-btn:focus-visible {
+  outline: 3px solid #ff8c00;
+  outline-offset: 2px;
+}
+
+/* 
+  WHY OUTLINE DOES NOT CHANGE CARD SIZE:
+  
+  Unlike 'border', an 'outline' is drawn completely outside an element's border box 
+  and is NOT part of the document layout flow or box model dimensions. Therefore, 
+  adding or toggling an outline on focus does not alter the element's width/height 
+  or displace surrounding elements in the card, whereas adding/changing a border 
+  adds to the element's total computed size and shifts surrounding content.
+*/

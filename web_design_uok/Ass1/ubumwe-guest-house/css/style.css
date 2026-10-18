@@ -1,14 +1,11 @@
-/* =========================================================
-   Part B: CSS Custom Property for the Main Color on :root
-   ========================================================= */
+
 :root {
-    --main-color: #3b1106; /* Dark brown theme header/footer color */
+    --main-color: #3b1106;
     --accent-orange-start: #d95305;
     --accent-orange-end: #d95305;
     --bg-light: #fdfbf7;
 }
 
-/* Base Setup */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -24,9 +21,7 @@ body {
     min-height: 100vh;
 }
 
-/* =========================================================
-   Part A: Shared Header & Navigation
-   ========================================================= */
+
 header {
     background-color: var(--main-color);
     padding: 24px 48px;
@@ -42,7 +37,6 @@ header {
     font-weight: bold;
 }
 
-/* Part C: Descendant selector to style only links inside #menu1 */
 #menu1 a {
     color: #ffffff;
     text-decoration: none;
@@ -51,12 +45,10 @@ header {
     margin-left: 28px;
 }
 
-/* Part C: :first-child selector to remove left margin of first link */
 #menu1 a:first-child {
     margin-left: 0;
 }
 
-/* Part C: Attribute selector to append "(PDF)" to .pdf links */
 a[href$=".pdf"]::after {
     content: " (PDF)";
     font-size: 11px;
@@ -64,9 +56,7 @@ a[href$=".pdf"]::after {
     opacity: 0.85;
 }
 
-/* =========================================================
-   Main Container Layout
-   ========================================================= */
+
 .page-container {
     max-width: 960px;
     margin: 40px auto;
@@ -74,9 +64,6 @@ a[href$=".pdf"]::after {
     width: 100%;
 }
 
-/* =========================================================
-   Part D: Welcome Block (Orange Gradient, Serif Title, Button)
-   ========================================================= */
 .welcome-block {
     background: linear-gradient(135deg, var(--accent-orange-start), var(--accent-orange-end));
     color: #ffffff;
@@ -85,9 +72,8 @@ a[href$=".pdf"]::after {
     margin-bottom: 24px;
 }
 
-/* Part E: Intro paragraph styles and specificity rule */
 .intro {
-    color: #fce3d6; /* Lower specificity */
+    color: #fce3d6;
     font-size: 12px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -96,11 +82,12 @@ a[href$=".pdf"]::after {
 }
 
 #intro {
-    color: #f3d0c1; /* Higher specificity wins! */
+    color: #f3d0c1;
 }
 
 /*
-   EXPLANATION FOR PART E:
+   EXPLANATION PART E:
+
    The selector '#intro' wins over '.intro' because an ID selector (#intro)
    has a higher specificity value (0, 1, 0, 0) compared to a class selector
    ('.intro', which is 0, 0, 1, 0). Therefore, the text color defined in
@@ -135,9 +122,6 @@ a[href$=".pdf"]::after {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* =========================================================
-   Part D: Feature Cards using Flexbox
-   ========================================================= */
 .features-container {
     display: flex;
     justify-content: space-between;
@@ -166,9 +150,7 @@ a[href$=".pdf"]::after {
     line-height: 1.4;
 }
 
-/* =========================================================
-   Shared Footer
-   ========================================================= */
+
 footer {
     background-color: var(--main-color);
     color: #ffffff;
